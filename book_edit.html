@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/books_edit.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <a href="index.html" id="logo">Book Management
+                        System</a>
+                </div>
+                <div class="col-md-4">
+                    <ul id="menu" class="d-flex justify-content-end mt-1">
+                        <li><a href="book_view.html">View Books</a></li>
+                        <!-- <li><a href="book_add.html">Add Books</a></li> -->
+                        <li><a href="book_edit.html">Edit Books</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="header1">
+            <h1>Book Management System</h1>
+            <button type="button" class="btn btn-outline-primary" "><a id='add_books_btn' href="book_add.html">Add Book</a></button>
+            <div class="topnav">
+                <input id="myInput" type="text" placeholder="Search..">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="editBookForm" tabindex="-1" aria-labelledby="editBookModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editBookModalLabel">Edit Book</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modal_img" style="margin:0 auto; height: 150px;" src="" alt="">
+                    <form id="editBookForm">
+                        <input type="hidden" id="editBookId" value="">
+                        <div class="mb-3">
+                            <label for="editBookName" class="form-label">Book Name</label>
+                            <input type="text" class="form-control" id="editBookName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editBookAuthor" class="form-label">Author</label>
+                            <input type="text" class="form-control" id="editBookAuthor" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editBookPrice" class="form-label">Price</label>
+                            <input type="number" class="form-control" id="editBookPrice" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editBookImage" class="form-label">Book Cover</label>
+                            <input type="file" class="form-control" id="editBookImage" accept="image/*">
+                            <img src="" id="editBookImagePreview" alt="Book Cover Preview" class="mt-2" style="max-width: 200px; display: none;">
+                        </div>
+                        <div class="mb-3">
+                            <label for="editPublishDate" class="form-label">Date of Publication</label>
+                            <input type="date" class="form-control" id="editPublishDate" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book list -->
+    <div class="container mt-5">
+        <table id="myTable" class="table table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">Book Id</th>
+                    <th scope="col">Book Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Publish Date</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="bookList">
+            </tbody>
+        </table>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 pt-1 text-white">
+                    © 2024 - Book Management System
+                </div>
+                <div class="col-md-4 text-right text-white">
+                    <ul id="social-icons" class="d-flex justify-content-end">
+                        <li><a href="https://www.facebook.com/" class="fa-brands fa-square-facebook" target="_blank"></a></li>
+                        <li><a href="https://www.linkedin.com/home" class="fa-brands fa-linkedin" target="_blank"></a></li>
+                        <li><a href="https://twitter.com/" class="fa-brands fa-square-x-twitter" target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<!-- BS JavaScript -->
+<script src="js/script.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<!-- Have fun using Bootstrap JS -->
+<script type="text/javascript"></script>
+</body>
+</html>
